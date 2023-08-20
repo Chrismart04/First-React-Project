@@ -1,14 +1,17 @@
 import React from "react";
-import  ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function Greeting (){
-    return <h1>Este es un componente</h1>
+function Greeting() {
+  const user = {
+    firstName: "Pedro",
+    lastName: "Juarez"
+  }
+  return <div>
+    <h1>{user.firstName}</h1>
+    <h2>{user.lastName}</h2>
+
+  </div>
 }
-root.render(
-    <div>
-        <Greeting/>
-        <Greeting/>
-    </div>
-)
+root.render(<Greeting />);
